@@ -6,6 +6,6 @@ node {
 		echo "Test"
 	}
 	stage('Integration Testing'){
-		ls -ltr
+		echo "Integration Test"
 	}
 }

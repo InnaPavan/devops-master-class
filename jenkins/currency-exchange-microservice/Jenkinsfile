@@ -30,20 +30,17 @@ pipeline {
 		}
 		stage ('Compile'){
 			steps {
-				sh "cd jenkins/currency-exchange-microservice"
-				sh "mvn clean compile"
+				sh "cd jenkins/currency-exchange-microservice;mvn clean compile"
 			}
 		}
 			stage ('Test'){
 			steps {
-				sh "cd jenkins/currency-exchange-microservice"
-				sh "mvn test"
+				sh "cd jenkins/currency-exchange-microservice;mvn test"
 			}
 		}
 			stage ('Integration Test'){
 			steps {
-				sh "cd jenkins/currency-exchange-microservice"
-				sh "mvn failsafe:integration-test failesafe:verify"
+				sh "cd jenkins/currency-exchange-microservice;mvn failsafe:integration-test failesafe:verify"
 			}
 		}
 	} 

@@ -43,7 +43,7 @@ pipeline {
 				sh "cd jenkins/currency-exchange-microservice;mvn failsafe:integration-test failsafe:verify"
 			}
 		}
-		stage ('Integration Test'){
+		stage ('Package'){
 			steps {
 				sh "cd jenkins/currency-exchange-microservice;mvn package -DskipTests"
 			}

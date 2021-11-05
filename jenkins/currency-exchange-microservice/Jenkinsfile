@@ -52,7 +52,7 @@ pipeline {
             steps {
                 //"docker build -t iinnapavan/currency-exchange:$env.BUILD_TAG"
                 script {
-                    dockerImage = docker.build("innapavan/currency-exchange:${env.BUILD_TAG}", "-f Dockerfile ./jenkins/currency-exchange-microservice/")
+                    dockerImage = docker.build("innapavan/currency-exchange:${env.BUILD_TAG}", "-f  ./jenkins/currency-exchange-microservice/Dockerfile")
                 }
             }
         }
